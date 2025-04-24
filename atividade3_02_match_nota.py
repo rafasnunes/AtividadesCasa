@@ -41,9 +41,11 @@ print(f'Nota 2: {av2}')
 
 print(media)
 
-if media >= 6:
-    print('Aluno Aprovado!')
-elif media >=3:
-    print('Aluno em Recuperação.')
-else:
-    print('Aluno Reprovado!')
+match media:
+    case m if m >= 6:
+        print('Aluno Aprovado!')
+    case m if m >= 3:
+        print('Aluno em Recuperação!')
+    case _:
+        print('Aluno Reprovado!')
+        
